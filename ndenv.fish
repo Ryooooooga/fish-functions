@@ -9,7 +9,7 @@ function ndenv
 
 	switch "$command"
 	case rehash shell
-		eval (ndenv sh-"$command" $argv|psub)
+		source (ndenv sh-"$command" $argv|psub)
 	case '*'
 		command ndenv "$command" $argv
 	end
